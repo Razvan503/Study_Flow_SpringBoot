@@ -50,7 +50,7 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(c -> c
                 .requestMatchers("/api/register","/api/login").permitAll()
-                .requestMatchers("/api/test").hasRole("USER")
+                .requestMatchers("/api/test","/api/addCourse").hasRole("USER")
         );
         return http.build();
 
