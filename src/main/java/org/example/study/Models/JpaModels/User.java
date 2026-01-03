@@ -1,4 +1,4 @@
-package org.example.study.Models;
+package org.example.study.Models.JpaModels;
 
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -36,8 +36,10 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Subject> subjects = new ArrayList<>();
 
+    public User() {
+    }
     // Default constructor for JPA
-    public User() {}
+    public User(String username, String fullname, String email, String password) {}
 
     // Constructor for registration
     public User(String username, String fullname, String email, String password, String role) {

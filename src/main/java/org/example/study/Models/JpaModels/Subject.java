@@ -1,6 +1,7 @@
-package org.example.study.Models;
+package org.example.study.Models.JpaModels;
 
 import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,9 @@ public class Subject {
     private List<Chapter> chapters = new ArrayList<>();
 
     private Integer progress;
+
+    @Column(name = "description")
+    private String description;
 
     public Subject() {}
 
@@ -68,5 +72,13 @@ public class Subject {
 
     public void setProgress(Integer progress){
         this.progress = progress;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

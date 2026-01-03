@@ -1,4 +1,4 @@
-package org.example.study.Models;
+package org.example.study.Models.JpaModels;
 
 import jakarta.persistence.*;
 
@@ -12,6 +12,9 @@ public class Chapter {
 
     @Column(name = "title")
     private String title;
+
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "time") // Assuming this maps to a column, though not in your provided SQL for chapters, keeping it.
     private Integer time;
@@ -64,4 +67,13 @@ public class Chapter {
     public void setSubject(Subject subject) {
         this.subject = subject;
     }
+
+    public String getDescription(){
+        return description;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+
 }

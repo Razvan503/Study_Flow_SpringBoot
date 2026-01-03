@@ -1,4 +1,4 @@
-package org.example.study.Models;
+package org.example.study.Models.Register;
 
 public class RegisterRequest {
     private String email;
