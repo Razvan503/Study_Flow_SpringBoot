@@ -1,0 +1,265 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 1073741824 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3554), pid=15256, tid=6404
+#
+# JRE version:  (25.0.1+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.0.1+8-LTS-27, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dosgi.checkConfiguration=true -Dosgi.sharedConfiguration.area=C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\jdtls\1.54.0\config_win -Dosgi.sharedConfiguration.area.readOnly=true -Dosgi.configuration.cascaded=true -Xms1G --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -javaagent:C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\lombok\1.18.42\lombok-1.18.42.jar C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\jdtls\1.54.0\plugins\org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration C:\Users\cioba\AppData\Local\Temp\nvim\jdtls\config -data C:\Users\cioba\AppData\Local\Temp\nvim\jdtls\workspace\proj_ceba9f5f950d438811a2f731befa5620065e6bcc0e76976ac9e2dcb14a9d2e1f
+
+Host: 11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz, 8 cores, 7G,  Windows 11 , 64 bit Build 26100 (10.0.26100.7309)
+Time: Thu Jan  8 19:44:37 2026 GTB Standard Time elapsed time: 1.165671 seconds (0d 0h 0m 1s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000019a20f004a0):  JavaThread "Unknown thread" [_thread_in_vm, id=6404, stack(0x00000076a3800000,0x00000076a3900000) (1024K)]
+
+Stack: [0x00000076a3800000,0x00000076a3900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x7a6b59]  (no source info available)
+V  [jvm.dll+0x77290d]  (no source info available)
+V  [jvm.dll+0x966153]  (no source info available)
+V  [jvm.dll+0x968751]  (no source info available)
+V  [jvm.dll+0x968e53]  (no source info available)
+V  [jvm.dll+0x2fc756]  (no source info available)
+V  [jvm.dll+0x7a2d85]  (no source info available)
+V  [jvm.dll+0x796197]  (no source info available)
+V  [jvm.dll+0x3f4698]  (no source info available)
+V  [jvm.dll+0x3fc5b6]  (no source info available)
+V  [jvm.dll+0x3e8c8e]  (no source info available)
+V  [jvm.dll+0x3e8f48]  (no source info available)
+V  [jvm.dll+0x3c0045]  (no source info available)
+V  [jvm.dll+0x3c0cce]  (no source info available)
+V  [jvm.dll+0x92c837]  (no source info available)
+V  [jvm.dll+0x458bc2]  (no source info available)
+V  [jvm.dll+0x9101e2]  (no source info available)
+V  [jvm.dll+0x4f9061]  (no source info available)
+V  [jvm.dll+0x4fa8f1]  (no source info available)
+C  [jli.dll+0x543e]  (no source info available)
+C  [ucrtbase.dll+0x37b0]  (no source info available)
+C  [KERNEL32.DLL+0x2e8d7]  (no source info available)
+C  [ntdll.dll+0x8c53c]  (no source info available)
+
+Lock stack of current Java thread (top to bottom):
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff885d45308, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x0000019a20f57e50 WorkerThread "GC Thread#0"                     [id=15100, stack(0x00000076a3900000,0x00000076a3a00000) (1024K)]
+  0x0000019a20f71c00 ConcurrentGCThread "G1 Main Marker"            [id=15168, stack(0x00000076a3a00000,0x00000076a3b00000) (1024K)]
+  0x0000019a20f727a0 WorkerThread "G1 Conc#0"                       [id=8932, stack(0x00000076a3b00000,0x00000076a3c00000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff885424c2a]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ff885dc9668] Heap_lock - owner thread: 0x0000019a20f004a0
+
+Heap address: 0x0000000083600000, size: 1994 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+Narrow klass pointer bits 32, Max shift 3
+Narrow klass base: 0xffffffffffffffff, Narrow klass shift: -1
+Encoding Range: [0xffffffffffffffff - 0x000000007fffffff), (2147483648 bytes)
+Klass Range:    [0x0000000000000000 - 0x0000000000000000), (0 bytes)
+Klass ID Range:  [4294967295 - 0) (1)
+No protection zone.
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 10 size 36 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total reserved 2041856K, committed 0K, used 0K [0x0000000083600000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+
+Card table byte_map: [0x0000019a38fb0000,0x0000019a393a0000] _byte_map_base: 0x0000019a38b95000
+
+Marking Bits: (CMBitMap*) 0x0000019a20f58df0
+ Bits: [0x0000019a393a0000, 0x0000019a3b2c8000)
+
+GC Heap Usage History (0 events):
+No events
+
+Metaspace Usage History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.014 Loaded shared library C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff68a7e0000 - 0x00007ff68a7f0000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\java.EXE
+0x00007ff8fee20000 - 0x00007ff8ff087000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8fd520000 - 0x00007ff8fd5e9000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8fc1a0000 - 0x00007ff8fc58f000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8fc630000 - 0x00007ff8fc77b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff8e5790000 - 0x00007ff8e57ae000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\VCRUNTIME140.dll
+0x00007ff8e4e60000 - 0x00007ff8e4e77000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\jli.dll
+0x00007ff8fe8c0000 - 0x00007ff8fea85000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8e1ff0000 - 0x00007ff8e2283000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7309_none_3e05feeae336a044\COMCTL32.dll
+0x00007ff8fca20000 - 0x00007ff8fca47000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8fd720000 - 0x00007ff8fd7c9000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff8fd040000 - 0x00007ff8fd06b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8fc830000 - 0x00007ff8fc95c000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8fbf70000 - 0x00007ff8fc013000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff8fed90000 - 0x00007ff8fedc1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8e5980000 - 0x00007ff8e598c000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\vcruntime140_1.dll
+0x00007ff8d3370000 - 0x00007ff8d33fd000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\msvcp140.dll
+0x00007ff885050000 - 0x00007ff885eaf000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\server\jvm.dll
+0x00007ff8fcbf0000 - 0x00007ff8fcca4000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8fec50000 - 0x00007ff8fecf6000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8fd0f0000 - 0x00007ff8fd208000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8fd070000 - 0x00007ff8fd0e4000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8fbdd0000 - 0x00007ff8fbe2e000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ff8f2630000 - 0x00007ff8f2665000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8f4e80000 - 0x00007ff8f4e8b000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8fbdb0000 - 0x00007ff8fbdc4000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ff8face0000 - 0x00007ff8facfb000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff8e5780000 - 0x00007ff8e578a000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\jimage.dll
+0x00007ff8f9060000 - 0x00007ff8f92a2000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff8fccb0000 - 0x00007ff8fd035000 	C:\WINDOWS\System32\combase.dll
+0x00007ff8fd5f0000 - 0x00007ff8fd6c6000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff8dee30000 - 0x00007ff8dee6c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff8fc780000 - 0x00007ff8fc825000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff8e4e50000 - 0x00007ff8e4e60000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\instrument.dll
+0x00007ff8e4c50000 - 0x00007ff8e4c6f000 	C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\java.dll
+0x00007ff8fe000000 - 0x00007ff8fe197000 	C:\WINDOWS\System32\ole32.dll
+0x00007ff8fd7d0000 - 0x00007ff8fdf23000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ff8fca50000 - 0x00007ff8fcbba000 	C:\WINDOWS\System32\wintypes.dll
+
+JVMTI agents:
+C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\lombok\1.18.42\lombok-1.18.42.jar path:none, loaded, not initialized, instrumentlib options:none
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.7309_none_3e05feeae336a044;C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dosgi.checkConfiguration=true -Dosgi.sharedConfiguration.area=C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\jdtls\1.54.0\config_win -Dosgi.sharedConfiguration.area.readOnly=true -Dosgi.configuration.cascaded=true -Xms1G --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -javaagent:C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\lombok\1.18.42\lombok-1.18.42.jar 
+java_command: C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\jdtls\1.54.0\plugins\org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration C:\Users\cioba\AppData\Local\Temp\nvim\jdtls\config -data C:\Users\cioba\AppData\Local\Temp\nvim\jdtls\workspace\proj_ceba9f5f950d438811a2f731befa5620065e6bcc0e76976ac9e2dcb14a9d2e1f
+java_class_path (initial): C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\jdtls\1.54.0\plugins\org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 1073741824                                {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 2090860544                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 1073741824                                {product} {command line}
+    uintx NonNMethodCodeHeapSize                   = 5832704                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122945536                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122880000                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2090860544                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Release file:
+<release file has not been read>
+Environment Variables:
+JAVA_HOME=C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1
+PATH=C:\Users\cioba\AppData\Local\nvim-data\nvim-java\packages\openjdk\25\jdk-25.0.1\bin;C:/Users/cioba/AppData/Local/nvim-data/mason/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Neovim\bin;C:\Program Files\GitHub CLI\;C:\Program Files\cursor\resources\app\bin;C:\Users\cioba\AppData\Local\Microsoft\WindowsApps;C:\Users\cioba\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\cioba\AppData\Roaming\npm;C:\Users\cioba\.dotnet\tools;C:\Users\cioba\AppData\Local\Programs\Antigravity\bin;C:\Program Files\Neovim\bin;C:\Program Files\Neovim\bin
+USERNAME=cioba
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 2, GenuineIntel
+TMP=C:\Users\cioba\AppData\Local\Temp
+TEMP=C:\Users\cioba\AppData\Local\Temp
+
+
+
+
+Compilation memory statistics disabled.
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.7309)
+OS uptime: 0 days 20:37 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 2 microcode 0x26, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, clwb, avx512_vbmi2, avx512_vbmi, hv, rdtscp, rdpid, fsrm, gfni, avx512_bitalg, f16c, cet_ibt, cet_ss, avx512_ifma
+Processor Information for the first 8 processors :
+  Max Mhz: 3187, Current Mhz: 3187, Mhz Limit: 3187
+
+Memory: 4k page, system-wide physical 7975M (1344M free)
+TotalPageFile size 13975M (AvailPageFile size 692M)
+current process WorkingSet (physical memory assigned to process): 14M, peak: 14M
+current process commit charge ("private bytes"): 61M, peak: 1084M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.0.1+8-LTS-27) for windows-amd64 JRE (25.0.1+8-LTS-27), built on 2025-09-25T16:41:16Z with unknown MS VC++:1943
+
+END.

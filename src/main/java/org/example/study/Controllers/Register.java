@@ -46,14 +46,14 @@ public class Register {
 
            ResponseCookie cookie = ResponseCookie.from("jwt",token)
                     .httpOnly(true)
-                    .secure(true)
+                    .secure(false)
                     .path("/")
                     .sameSite("Strict")
                     .build();
 
            headers.add(HttpHeaders.SET_COOKIE,cookie.toString());
 
-          return new ResponseEntity<>(HttpStatus.OK);
+          return new ResponseEntity<>(headers,HttpStatus.OK);
         }
 
     }

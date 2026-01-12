@@ -35,6 +35,9 @@ public class JwtValidationFilter implements Filter {
        }
 
        String jwt = httpRequest.getHeader("Cookie");
+       if(jwt == null){
+           return;
+       }
        String token = jwt.substring("jwt=".length()); //takes the actual token
        String username = tokenReader.getUsername(token);
        String role = tokenReader.getRole(token);
