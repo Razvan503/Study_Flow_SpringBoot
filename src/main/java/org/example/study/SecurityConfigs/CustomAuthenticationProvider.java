@@ -34,11 +34,9 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 		}
 	}
 
-	// Spring security is a tool from hell
-	// That uses Interfaces that is implement other interfaces
 	@Override
 	public boolean supports(Class<?> authentcationType) {
-		return authentcationType.equals(UsernamePasswordAuthenticationToken.class); // Reflection is a bullshit
-												// and i hate it
+		return authentcationType.equals(UsernamePasswordAuthenticationToken.class); 
+												
 	}
 }
